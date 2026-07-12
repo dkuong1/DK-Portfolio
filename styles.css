@@ -19,7 +19,7 @@ body {
   margin: 0;
   font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
   line-height: 1.6;
-  background: radial-gradient(circle at top left, rgba(255, 255, 255, 0.06), transparent 18%), url('https://images.unsplash.com/photo-1517433456452-f9633a875f6f?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat fixed, linear-gradient(180deg, #090b10 0%, #11171f 100%);
+  background: radial-gradient(circle at top left, rgba(255, 255, 255, 0.06), transparent 18%), url('https://images.unsplash.com/photo-1756694938645-9e3d829b0f28?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat fixed, linear-gradient(180deg, #090b10 0%, #11171f 100%);
   color: var(--text);
 }
 
