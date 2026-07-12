@@ -44,10 +44,10 @@ body {
   content: '';
   position: absolute;
   inset: 0;
-  background: url('https://images.unsplash.com/photo-1517433456452-f9633a875f6f?auto=format&fit=crop&w=1600&q=80') 50% 50% / cover no-repeat;
-  opacity: 0.14;
-  filter: grayscale(1) contrast(0.85) brightness(0.45);
-  mix-blend-mode: overlay;
+  z-index: 0;
+  background: linear-gradient(rgba(9, 11, 16, 0.45), rgba(9, 11, 16, 0.45)), url('https://images.unsplash.com/photo-1517433456452-f9633a875f6f?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+  opacity: 0.24;
+  filter: grayscale(1) contrast(0.9) brightness(0.7);
   pointer-events: none;
   animation: hero-background-move 30s ease-in-out infinite alternate;
 }
