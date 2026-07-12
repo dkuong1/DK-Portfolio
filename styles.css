@@ -241,6 +241,7 @@ h1 {
   background: linear-gradient(120deg, rgba(255, 255, 255, 0.06) 0%, transparent 28%, rgba(255, 255, 255, 0.03) 100%);
   opacity: 0.35;
   pointer-events: none;
+  animation: pulse-highlight 6s ease-in-out infinite;
 }
 
 .card:hover,
@@ -306,6 +307,17 @@ h3 {
   text-align: center;
   padding: 2rem 1rem 3rem;
   color: var(--muted);
+}
+
+@keyframes pulse-highlight {
+  0%, 100% {
+    opacity: 0.34;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(1.015);
+  }
 }
 
 @media (max-width: 700px) {
