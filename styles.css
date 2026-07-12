@@ -46,18 +46,37 @@ body {
   justify-content: flex-end;
   padding: 1rem 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.03), transparent 95%);
 }
 
 .nav a {
-  color: var(--accent);
+  color: rgba(198, 210, 229, 0.92);
   text-decoration: none;
   font-weight: 700;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+  position: relative;
+  padding: 0.2rem 0;
+  transition: color 0.2s ease;
+}
+
+.nav a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.9), rgba(154, 170, 186, 0.7));
+  transition: width 0.22s ease, opacity 0.22s ease;
+  opacity: 0;
 }
 
 .nav a:hover {
   color: var(--highlight);
-  text-shadow: 0 2px 8px rgba(255, 255, 255, 0.18);
+}
+
+.nav a:hover::after {
+  width: 100%;
+  opacity: 1;
 }
 
 .hero-content {
@@ -159,12 +178,12 @@ h1 {
 .contact-card {
   position: relative;
   overflow: hidden;
-  background: linear-gradient(180deg, #1c2430 0%, #151d28 50%, #10151d 100%);
+  background: linear-gradient(145deg, #171f2a 0%, #111720 35%, #1b2634 65%, #141c27 100%);
   color: var(--text);
-  padding: 1.2rem;
+  padding: 1.3rem;
   border-radius: 1rem;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.32), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.13);
+  box-shadow: 0 24px 54px rgba(0, 0, 0, 0.34), inset 0 1px 0 rgba(255, 255, 255, 0.08);
   transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease, background 0.25s ease;
   backdrop-filter: blur(4px);
 }
@@ -176,8 +195,20 @@ h1 {
   content: '';
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at top left, rgba(255, 255, 255, 0.08), transparent 34%);
-  opacity: 0.2;
+  background: radial-gradient(circle at top left, rgba(255, 255, 255, 0.12), transparent 30%), linear-gradient(120deg, rgba(255, 255, 255, 0.05), transparent 35%);
+  opacity: 0.24;
+  pointer-events: none;
+}
+
+.card::after,
+.project-card::after,
+.tracker-card::after,
+.focus-box::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, rgba(255, 255, 255, 0.06) 0%, transparent 28%, rgba(255, 255, 255, 0.03) 100%);
+  opacity: 0.35;
   pointer-events: none;
 }
 
