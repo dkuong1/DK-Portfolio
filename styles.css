@@ -40,6 +40,17 @@ body {
   pointer-events: none;
 }
 
+.hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url('https://images.unsplash.com/photo-1517433456452-f9633a875f6f?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+  opacity: 0.12;
+  filter: grayscale(1) contrast(0.75) brightness(0.35);
+  mix-blend-mode: overlay;
+  pointer-events: none;
+}
+
 .nav {
   display: flex;
   gap: 1.2rem;
