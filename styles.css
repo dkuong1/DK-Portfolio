@@ -19,14 +19,14 @@ body {
   margin: 0;
   font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
   line-height: 1.6;
-  background: radial-gradient(circle at top left, rgba(255, 255, 255, 0.06), transparent 18%), linear-gradient(180deg, #090b10 0%, #11171f 100%);
+  background: radial-gradient(circle at top left, rgba(255, 255, 255, 0.06), transparent 18%), url('https://images.unsplash.com/photo-1517433456452-f9633a875f6f?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat fixed, linear-gradient(180deg, #090b10 0%, #11171f 100%);
   color: var(--text);
 }
 
 .hero {
   min-height: 100vh;
   position: relative;
-  background: linear-gradient(160deg, #0c131a 0%, #121a24 55%, #090d12 100%);
+  background: linear-gradient(160deg, rgba(12, 19, 26, 0.95) 0%, rgba(18, 26, 36, 0.95) 55%, rgba(9, 13, 18, 0.98) 100%);
   padding: 1rem 2rem 4rem;
   overflow: hidden;
 }
@@ -45,9 +45,8 @@ body {
   position: absolute;
   inset: 0;
   z-index: 0;
-  background: linear-gradient(rgba(9, 11, 16, 0.45), rgba(9, 11, 16, 0.45)), url('https://images.unsplash.com/photo-1517433456452-f9633a875f6f?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
-  opacity: 0.24;
-  filter: grayscale(1) contrast(0.9) brightness(0.7);
+  background: radial-gradient(circle at center, rgba(255, 255, 255, 0.08), transparent 45%);
+  opacity: 0.18;
   pointer-events: none;
   animation: hero-background-move 30s ease-in-out infinite alternate;
 }
@@ -192,13 +191,16 @@ h1 {
 
 @keyframes hero-background-move {
   0% {
-    transform: scale(1.02) translate(0, 0);
+    opacity: 0.18;
+    transform: scale(1) translate(0, 0);
   }
   50% {
-    transform: scale(1.03) translate(-2%, -1.5%);
+    opacity: 0.22;
+    transform: scale(1.01) translate(-1.2%, -0.8%);
   }
   100% {
-    transform: scale(1.02) translate(1.5%, 1%);
+    opacity: 0.18;
+    transform: scale(1) translate(1.2%, 0.8%);
   }
 }
 
